@@ -7,21 +7,18 @@ $(document).ready(function() {
   var html = " ";
 
   users.forEach(function(user) {
-    //calling api
-    //getting stream status by user
+    //call the API
     var apiurl = "https://wind-bow.gomix.me/twitch-api/" + "streams/" + user + "?callback=?";
+   
     //getting user info
     $.getJSON(apiurl, function(json) {
-        //if user is streaming live
         if (json.stream != null) { 
-          //console.log(user + " online");
           userLogo = json.stream.channel.logo;
           userProfile = json.stream.channel.display_name;
           userFollowers = json.stream.channel.followers;
           userStatus = 1;
           userActivity = json.stream.channel.status;
           userUrl = twitch_url + userProfile;
-          //console.log(userLogo + " " + userProfile + " " +userFollowers+ " " +userStatus + " " + userActivity);
           html += "'<tr><th scope='row'>"
           html += "<img src='" + userLogo + "'></th>";
           html += "<td><a href='" + userUrl + "' target='_blank'>" + userProfile + "</a></td>";
@@ -31,9 +28,8 @@ $(document).ready(function() {
           $("table tbody").html(html);
         }
         else {
-           //if the user isn't streaming right now, getting the info from the channel
+           //Information/Activity from the channel
           var channelurl = baseurl + "channels/" + user + "?callback=?";
-          //console.log(channelurl);
           $.getJSON(channelurl, function(json) {
             userLogo = json.logo;
             userProfile = json.display_name;
@@ -53,6 +49,8 @@ $(document).ready(function() {
   });
 });
 
+
+//Status of accounts are set to live or offline 
 $(document).ready(function() {
   getChannelInfo();
   $(".selector").click(function() {
