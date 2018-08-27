@@ -1,68 +1,80 @@
-html {
-  font-size: 20px;
-  background-color: black;
-}
-
 .main {
   margin-top: 20px;
 }
 
 h1 {
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.2;
   font-weight: 700;
 }
 
-
 #streamers {
   margin: 50px 80px;
   margin-left: 20px;
+  font-family: 'Roboto', sans-serif;
 }
-
 
 #streamers img {
   width: 50px;
   height: 50px;
   border-radius: 20%;
+  font-family: 'Roboto', sans-serif;
 }
 
 #streamers a {
   font-weight: bold;
-  text-decoration-line: none;
+  font-family: 'Roboto', sans-serif;
+  color: #482dbf;
+  font-size: 16px;
 }
 
 .offline {
   font-weight: bold;
-  color: red;
+  color: #e83f25;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 .online {
   font-weight: bold;
-  color: green;
+  color: #57a7e0;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 
 @media (max-width: 550px){
-
   tr th:nth-child(4),tr td:nth-child(4){
-
     display:none;
   }
   tr th:nth-child(5),tr td:nth-child(5){
-
     display:none;
   }
 }
 
 .container {
     width: 100%;
-    padding-top: 50px;
-    max-width: 900px;
+    padding-top: 20px;
+    max-width: 750px;
+    height: 750px;
+    padding-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: black;
 }
 
 #box-ul{
     background-color: white;
     padding: 20px 20px 20px 20px;
     border-radius: 10px;
-    box-shadow: 3px 3px 3px 3px #d3d1dd;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+      height: 100vh;
+    background: url("https://bit.ly/2JO6Kf7") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }

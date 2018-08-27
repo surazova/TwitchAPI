@@ -22,7 +22,7 @@ $(document).ready(function() {
           html += "'<tr><th scope='row'>"
           html += "<img src='" + userLogo + "'></th>";
           html += "<td><a href='" + userUrl + "' target='_blank'>" + userProfile + "</a></td>";
-          html += "<td><span class='online'>Live!</span></td>";
+          html += "<td><span class='online'>Online</span></td>";
           html += "<td>" + userActivity + "</td>";
           html += "<td>" + userFollowers + "</td></tr>";
           $("table tbody").html(html);
@@ -50,10 +50,10 @@ $(document).ready(function() {
 });
 
 
-//Status of accounts are set to live or offline 
+//Status are set to online or offline 
 $(document).ready(function() {
   getChannelInfo();
-  $(".selector").click(function() {
+    $(".selector").click(function() {
     $(".selector").removeClass("active");
     $(this).addClass("active");
     var status = $(this).attr('id');
