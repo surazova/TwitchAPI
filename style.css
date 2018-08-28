@@ -67,6 +67,10 @@ h1 {
     padding: 20px 20px 20px 20px;
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6f535f4ac0b63a6d30c9cd94544911c6f4677ab0
 }
 
 body {
@@ -76,4 +80,8 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 6f535f4ac0b63a6d30c9cd94544911c6f4677ab0
